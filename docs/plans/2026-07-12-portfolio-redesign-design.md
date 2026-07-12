@@ -98,8 +98,9 @@ clients, and personal brand.
 - **jezda.net** — Jezda Solutions company site + multi-tenant admin.
   *React 19, Vite, TypeScript, Tailwind, i18n (7 langs).* (**live** — link jezda.net)
 
-> `aleacc` (iGaming/casino) — TBD: confirm with Zoran whether this is his to
-> showcase or prior-employer/contract work before including.
+> `aleacc` (iGaming/casino tournaments) — **excluded** from Projects: worked on
+> it, not his product. May surface only as iGaming context in the experience
+> narrative, never claimed as his own work.
 > Excluded (empty/trivial): `fiskalac`, `hrms-js`, `platform-test`,
 > `easycartz`, `grebach-cenoteka`, `weed-green-light`, `retail-core`,
 > `pos-electron-react`, `vps-phoenix` (may mention infra story only).
