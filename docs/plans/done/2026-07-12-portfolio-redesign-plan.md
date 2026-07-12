@@ -1,6 +1,8 @@
 # Portfolio Redesign v2 Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> Implemented and merged via PR #1 (2026-07-12). All tasks complete.
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Rebuild jezdimirovic.github.io as a top-tier dark "developer" personal portfolio using Tailwind (CLI build) + vanilla JS, filled with Zoran's real CV, experience, and projects.
 
@@ -69,14 +71,14 @@ Manual browser check (via the `run` skill or opening `http://localhost:8099/`) i
 **Interfaces:**
 - Produces: compiled `assets/css/main.css`; `index.html` with `<head>` SEO block, dark `<body>` shell, and `<link rel="stylesheet" href="assets/css/main.css">`. Later tasks fill `<body>` sections.
 
-- [ ] **Step 1: Create `.gitignore` entry**
+- [x] **Step 1: Create `.gitignore` entry**
 
 Append to `.gitignore`:
 ```
 node_modules/
 ```
 
-- [ ] **Step 2: Create `package.json`**
+- [x] **Step 2: Create `package.json`**
 
 ```json
 {
@@ -94,7 +96,7 @@ node_modules/
 }
 ```
 
-- [ ] **Step 3: Create `tailwind.config.js`**
+- [x] **Step 3: Create `tailwind.config.js`**
 
 ```js
 /** @type {import('tailwindcss').Config} */
@@ -124,7 +126,7 @@ module.exports = {
 };
 ```
 
-- [ ] **Step 4: Create `assets/css/tailwind.src.css`**
+- [x] **Step 4: Create `assets/css/tailwind.src.css`**
 
 ```css
 @tailwind base;
@@ -157,7 +159,7 @@ module.exports = {
 }
 ```
 
-- [ ] **Step 5: Create `index.html` skeleton (head + empty body shell)**
+- [x] **Step 5: Create `index.html` skeleton (head + empty body shell)**
 
 Full `<head>` with SEO/OG/JSON-LD (self-hosted or Google Fonts link), body with empty `<header>`, `<main>`, `<footer>` placeholders and the CSS link. Head content:
 ```html
@@ -207,7 +209,7 @@ Full `<head>` with SEO/OG/JSON-LD (self-hosted or Google Fonts link), body with 
 ```
 (Self-hosting fonts is preferred; the Google Fonts `<link>` above is acceptable for v1 — switch to self-host in Task 8 if time allows.)
 
-- [ ] **Step 6: Install deps and build CSS**
+- [x] **Step 6: Install deps and build CSS**
 
 Run:
 ```bash
@@ -216,7 +218,7 @@ npm run build:css
 ```
 Expected: `assets/css/main.css` is created/updated, no build errors.
 
-- [ ] **Step 7: Verify page loads with dark theme**
+- [x] **Step 7: Verify page loads with dark theme**
 
 Run:
 ```bash
@@ -228,7 +230,7 @@ kill $SRV
 ```
 Expected: both "OK" lines print. Open `http://localhost:8099/` in a browser: background is dark navy, no console errors.
 
-- [ ] **Step 8: Commit**
+- [x] **Step 8: Commit**
 
 ```bash
 git add package.json package-lock.json tailwind.config.js .gitignore assets/css/tailwind.src.css assets/css/main.css index.html
@@ -247,11 +249,11 @@ git commit -m "feat: scaffold Tailwind build + SEO head skeleton"
 - Consumes: `.btn-primary`, `.btn-ghost`, `.container-page`, `.reveal` from Task 1.
 - Produces: nav anchor links (`#about #skills #experience #projects #companies #contact`) that later tasks' section `id`s must match; `.reveal` + `is-visible` toggling available site-wide; `data-typed` hook on hero role element.
 
-- [ ] **Step 1: Add sticky nav to `<header>`**
+- [x] **Step 1: Add sticky nav to `<header>`**
 
 Nav with brand `ZJ`, desktop anchor links (About, Skills, Experience, Projects, Companies, Contact), a "Download CV" button linking `assets/cv/Zoran-Jezdimirovic-CV.pdf`, and a mobile hamburger button `#nav-toggle` controlling `#nav-menu`. Use `.container-page`, `bg-base/80 backdrop-blur border-b border-line`, `sticky top-0 z-50`.
 
-- [ ] **Step 2: Add hero section to `<main>`**
+- [x] **Step 2: Add hero section to `<main>`**
 
 ```html
 <section id="hero" class="section min-h-[92vh] flex items-center">
@@ -276,11 +278,11 @@ Nav with brand `ZJ`, desktop anchor links (About, Skills, Experience, Projects, 
 </section>
 ```
 
-- [ ] **Step 3: Add footer**
+- [x] **Step 3: Add footer**
 
 Footer with `© 2026 Zoran Jezdimirović`, quick anchor links, and a small "Built with Tailwind · Hosted on GitHub Pages" line. Use `border-t border-line text-muted`.
 
-- [ ] **Step 4: Write `assets/js/main.js`**
+- [x] **Step 4: Write `assets/js/main.js`**
 
 ```js
 // Mobile menu toggle
@@ -339,7 +341,7 @@ if (typedEl && !reduce) {
 ```
 (Nav links in Step 1 must carry `data-nav` and `href="#section"` for scroll-spy.)
 
-- [ ] **Step 5: Rebuild CSS and verify**
+- [x] **Step 5: Rebuild CSS and verify**
 
 Run:
 ```bash
@@ -354,7 +356,7 @@ kill $SRV
 ```
 Expected: three "OK" lines. Browser check: hero renders, typed effect animates, mobile hamburger toggles the menu, no console errors.
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add index.html assets/js/main.js assets/css/main.css
@@ -372,14 +374,14 @@ git commit -m "feat: nav, hero, footer + interaction JS"
 - Consumes: `.section`, `.container-page`, `.eyebrow`, `.h-section`, `.card`, `.tag`, `.reveal`.
 - Produces: `#about` and `#skills` section anchors.
 
-- [ ] **Step 1: Add About section**
+- [x] **Step 1: Add About section**
 
 Two-column: optimized `profile-img.jpg` (rounded, bordered) + copy. Text (from CV, no personal identifiers):
 > Senior full-stack software engineer with 12+ years shipping production systems across fintech, iGaming, banking, and retail. Deep in the Microsoft stack (.NET / C#) with a strong React/TypeScript front-end practice and a test-driven approach. Currently building complex web apps at Kaizen Ticketing (London, remote) and, as co-owner of Jezda Solutions, an entire modular ERP platform, POS, and e-commerce suite.
 
 Include compact facts row: `12+ yrs experience`, `London · remote`, `Bachelor — Belgrade Metropolitan University`, `Available for work`. **No date of birth.**
 
-- [ ] **Step 2: Add Skills section**
+- [x] **Step 2: Add Skills section**
 
 Four `.card` groups with `.tag` chips (from `cv.docx`):
 - **Backend:** C#, .NET / ASP.NET Core, EF Core, CQRS, Web API, REST
@@ -387,7 +389,7 @@ Four `.card` groups with `.tag` chips (from `cv.docx`):
 - **Data:** PostgreSQL, MS SQL Server, Redis, Firebase
 - **Practices & DevOps:** TDD (NUnit/xUnit), Docker, Git, CI/CD, Agile
 
-- [ ] **Step 3: Rebuild CSS and verify**
+- [x] **Step 3: Rebuild CSS and verify**
 
 Run:
 ```bash
@@ -401,7 +403,7 @@ kill $SRV
 ```
 Expected: both "OK" lines. Browser check: sections render, cards laid out, reveal animates on scroll.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add index.html assets/css/main.css
@@ -419,7 +421,7 @@ git commit -m "feat: about + skills sections"
 - Consumes: `.section`, `.container-page`, `.card`, `.tag`, `.reveal`.
 - Produces: `#experience` anchor.
 
-- [ ] **Step 1: Add Experience section (vertical timeline)**
+- [x] **Step 1: Add Experience section (vertical timeline)**
 
 One entry per role, newest first, each with title, company, location/mode, dates, 1–2 line description, tech tags. Exact content (from `cv.docx` / spec):
 
@@ -432,7 +434,7 @@ One entry per role, newest first, each with title, company, location/mode, dates
 
 Add an education line: **Bachelor's — Management of IT Systems, Belgrade Metropolitan University · 2008–2013**.
 
-- [ ] **Step 2: Rebuild CSS and verify**
+- [x] **Step 2: Rebuild CSS and verify**
 
 Run:
 ```bash
@@ -445,7 +447,7 @@ kill $SRV
 ```
 Expected: both "OK" lines. Browser check: timeline renders top-to-bottom, all 6 roles + education present.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add index.html assets/css/main.css
@@ -463,7 +465,7 @@ git commit -m "feat: experience timeline"
 - Consumes: `.section`, `.container-page`, `.card`, `.tag`, `.reveal`.
 - Produces: `#projects` anchor.
 
-- [ ] **Step 1: Add Projects grid**
+- [x] **Step 1: Add Projects grid**
 
 Grid of `.card`s, each: title, one-line overview, tech tags, and a link only where public/live. Content (from spec catalog):
 
@@ -480,7 +482,7 @@ Grid of `.card`s, each: title, one-line overview, tech tags, and a link only whe
 
 Mark private items with a small `private` / commercial badge (no dead links).
 
-- [ ] **Step 2: Rebuild CSS and verify**
+- [x] **Step 2: Rebuild CSS and verify**
 
 Run:
 ```bash
@@ -494,7 +496,7 @@ kill $SRV
 ```
 Expected: three "OK" lines. Browser check: grid renders, public/live links clickable, private items badged without links.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add index.html assets/css/main.css
@@ -512,18 +514,18 @@ git commit -m "feat: projects section"
 - Consumes: `.section`, `.container-page`, `.card`, `.btn-primary`, `.reveal`.
 - Produces: `#companies` and `#contact` anchors.
 
-- [ ] **Step 1: Add "Companies I've worked with" strip**
+- [x] **Step 1: Add "Companies I've worked with" strip**
 
 Row of company names (text or simple monochrome wordmarks): Kaizen Ticketing, Bethard, CPA Global, GET, Usablenet, Jezda Solutions. Muted styling, hover to accent. No fabricated logos — text wordmarks are fine.
 
-- [ ] **Step 2: Add Contact section (mailto, no live form yet)**
+- [x] **Step 2: Add Contact section (mailto, no live form yet)**
 
 Heading + short line ("Have a project or role in mind? Let's talk.") and:
 - Primary button `mailto:zoran.jezdimirovic@gmail.com?subject=Hello%20Zoran` labeled "Email me".
 - Secondary links: LinkedIn, GitHub.
 - A styled **non-submitting** contact card is acceptable, but the CTA must be the mailto (no fake form action). Do NOT embed any API key or endpoint.
 
-- [ ] **Step 3: Rebuild CSS and verify**
+- [x] **Step 3: Rebuild CSS and verify**
 
 Run:
 ```bash
@@ -538,7 +540,7 @@ kill $SRV
 ```
 Expected: four "OK" lines (including "no secrets OK").
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add index.html assets/css/main.css
@@ -558,7 +560,7 @@ git commit -m "feat: companies + contact (mailto)"
 - Consumes: nothing.
 - Produces: `assets/cv/Zoran-Jezdimirovic-CV.pdf` (referenced by hero + nav), `assets/img/og-image.png` (referenced by head).
 
-- [ ] **Step 1: Generate CV PDF from `cv.docx`**
+- [x] **Step 1: Generate CV PDF from `cv.docx`**
 
 Fetch `cv.docx` content (already extracted in the spec / Google Drive) and produce a clean 1–2 page PDF. Prefer a simple pipeline, e.g. author a minimal HTML CV and render to PDF, or use `pandoc cv.md -o Zoran-Jezdimirovic-CV.pdf` if available. Place at `assets/cv/Zoran-Jezdimirovic-CV.pdf`. Verify it opens and text is selectable.
 
@@ -570,7 +572,7 @@ test -s assets/cv/Zoran-Jezdimirovic-CV.pdf && echo "CV PDF OK"
 ```
 Expected: "CV PDF OK".
 
-- [ ] **Step 2: Create OG image (1200×630)**
+- [x] **Step 2: Create OG image (1200×630)**
 
 Dark card with name + role + accent gradient. Generate `assets/img/og-image.png` at 1200×630. Verify dimensions:
 ```bash
@@ -578,7 +580,7 @@ python3 -c "from PIL import Image; im=Image.open('assets/img/og-image.png'); pri
 ```
 Expected: `(1200, 630)`.
 
-- [ ] **Step 3: Optimize profile image and remove cruft**
+- [x] **Step 3: Optimize profile image and remove cruft**
 
 ```bash
 # optimize profile-img.jpg (resize max 800px wide, recompress)
@@ -597,14 +599,14 @@ grep -rq 'img/portfolio' index.html || git rm -qr assets/img/portfolio 2>/dev/nu
 grep -rq 'img/testimonials' index.html || git rm -qr assets/img/testimonials 2>/dev/null || true
 ```
 
-- [ ] **Step 4: Verify page still references valid assets**
+- [x] **Step 4: Verify page still references valid assets**
 
 ```bash
 for a in assets/img/profile-img.jpg assets/img/og-image.png assets/cv/Zoran-Jezdimirovic-CV.pdf assets/img/favicon.png; do test -s "$a" && echo "ok $a" || echo "MISSING $a"; done
 ```
 Expected: four "ok" lines, no "MISSING".
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add assets/cv assets/img/og-image.png assets/img/profile-img.jpg
@@ -621,7 +623,7 @@ git commit -m "feat: CV PDF, OG image, optimize + prune images"
 - Modify: `README.md`
 - Delete: `portfolio-details.html`, `forms/`, `assets/vendor/`, `assets/scss/`, template `Readme.txt` files, unused `assets/js` template leftovers
 
-- [ ] **Step 1: Create `robots.txt`**
+- [x] **Step 1: Create `robots.txt`**
 
 ```
 User-agent: *
@@ -629,7 +631,7 @@ Allow: /
 Sitemap: https://jezdimirovic.github.io/sitemap.xml
 ```
 
-- [ ] **Step 2: Create `sitemap.xml`**
+- [x] **Step 2: Create `sitemap.xml`**
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -638,7 +640,7 @@ Sitemap: https://jezdimirovic.github.io/sitemap.xml
 </urlset>
 ```
 
-- [ ] **Step 3: Create `site.webmanifest`**
+- [x] **Step 3: Create `site.webmanifest`**
 
 ```json
 {
@@ -651,7 +653,7 @@ Sitemap: https://jezdimirovic.github.io/sitemap.xml
 }
 ```
 
-- [ ] **Step 4: Remove all template leftovers**
+- [x] **Step 4: Remove all template leftovers**
 
 ```bash
 git rm -q portfolio-details.html 2>/dev/null || true
@@ -671,7 +673,7 @@ kill $SRV
 ```
 Expected: every local asset returns `200` (no `404`).
 
-- [ ] **Step 5: Update `README.md`**
+- [x] **Step 5: Update `README.md`**
 
 ```markdown
 # jezdimirovic.github.io
@@ -689,7 +691,7 @@ python3 -m http.server 8099   # serve at http://localhost:8099
 Build production CSS: `npm run build:css`. Static site, hosted on GitHub Pages.
 ```
 
-- [ ] **Step 6: Accessibility + Lighthouse pass**
+- [x] **Step 6: Accessibility + Lighthouse pass**
 
 Manual/browser audit at `http://localhost:8099/`:
 - All images have `alt`. Interactive elements reachable by keyboard with visible focus.
@@ -697,7 +699,7 @@ Manual/browser audit at `http://localhost:8099/`:
 - `prefers-reduced-motion` disables typed effect + reveal (toggle in devtools to confirm).
 - Run Lighthouse (Chrome devtools). Target: Performance ≥ 90, Accessibility ≥ 95, Best Practices ≥ 95, SEO 100. Fix any flagged issues inline.
 
-- [ ] **Step 7: Commit**
+- [x] **Step 7: Commit**
 
 ```bash
 git add robots.txt sitemap.xml site.webmanifest README.md
@@ -709,7 +711,7 @@ git commit -m "chore: SEO files, manifest, remove template leftovers"
 
 ### Task 9: Final review, PR, and Pages deploy note
 
-- [ ] **Step 1: Full-page smoke test**
+- [x] **Step 1: Full-page smoke test**
 
 ```bash
 npm run build:css
@@ -722,14 +724,14 @@ kill $SRV
 ```
 Expected: seven "ok" lines + "clean OK", no "MISSING".
 
-- [ ] **Step 2: Push branch and open PR**
+- [x] **Step 2: Push branch and open PR**
 
 ```bash
 git push -u origin feature/portfolio-redesign-v2
 gh pr create --base dev --title "Portfolio redesign v2 (dark developer, Tailwind)" --body "Full rebuild per docs/plans/2026-07-12-portfolio-redesign-design.md. Dark developer theme, Tailwind CLI build, real CV/experience/projects, mailto contact. Golub-backed form is Phase 2."
 ```
 
-- [ ] **Step 3: Note GitHub Pages source**
+- [x] **Step 3: Note GitHub Pages source**
 
 After merge, confirm GitHub Pages "Build and deployment" source points at the branch that serves the site (repo Settings → Pages). For a `username.github.io` user site this is typically `main`/`master` root. If the site currently deploys from a different branch, coordinate the merge target accordingly (the plan opens the PR against `dev` per repo convention; final publish branch is a repo setting to verify, not a code change).
 
