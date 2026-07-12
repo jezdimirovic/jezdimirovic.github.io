@@ -258,6 +258,142 @@
         </ol>
       </div>
     </section>
+
+    <section id="projects" class="section">
+      <div class="container-page">
+        <p class="eyebrow reveal">Projects</p>
+        <h2 class="mt-3 h-section reveal">What I've built</h2>
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="card reveal">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-lg font-semibold text-ink">Jezda Platform</h3>
+              <span class="inline-flex shrink-0 items-center rounded-full border border-line px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-muted">Private</span>
+            </div>
+            <p class="mt-3 text-sm text-muted">Modular-monolith ERP unifying identity, HR, tasks, commerce/retail, accounting, finance, CRM and notifications behind one Web API.</p>
+            <ul class="mt-4 flex flex-wrap gap-2">
+              <li class="tag">.NET 10</li>
+              <li class="tag">PostgreSQL</li>
+              <li class="tag">EF Core</li>
+              <li class="tag">CQRS</li>
+              <li class="tag">Hangfire</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-lg font-semibold text-ink">SERP</h3>
+              <span class="inline-flex shrink-0 items-center rounded-full border border-line px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-muted">Private</span>
+            </div>
+            <p class="mt-3 text-sm text-muted">Unified React SPA front end for the platform: commerce, HRMS, tasks, accounting and real-time notifications with shared auth and permissions.</p>
+            <ul class="mt-4 flex flex-wrap gap-2">
+              <li class="tag">React 19</li>
+              <li class="tag">TypeScript</li>
+              <li class="tag">Vite</li>
+              <li class="tag">Tailwind</li>
+              <li class="tag">SignalR</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-lg font-semibold text-ink">Jezda POS</h3>
+              <span class="inline-flex shrink-0 items-center rounded-full border border-line px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-muted">Private</span>
+            </div>
+            <p class="mt-3 text-sm text-muted">Cross-platform Point-of-Sale (Windows + Android) with retail &amp; HoReCa modes, fiscal receipts, split payments, inventory, loyalty and platform sync.</p>
+            <ul class="mt-4 flex flex-wrap gap-2">
+              <li class="tag">Flutter</li>
+              <li class="tag">Dart</li>
+              <li class="tag">ESC/POS</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-lg font-semibold text-ink">Golub</h3>
+              <span class="inline-flex shrink-0 items-center rounded-full border border-line px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-muted">Private</span>
+            </div>
+            <p class="mt-3 text-sm text-muted">Smart email relay that stacks multiple providers' free tiers (SendGrid, Brevo, Mandrill) with priority rotation, quota tracking and full audit logging.</p>
+            <ul class="mt-4 flex flex-wrap gap-2">
+              <li class="tag">.NET 9</li>
+              <li class="tag">PostgreSQL</li>
+              <li class="tag">MIT</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <h3 class="text-lg font-semibold text-ink">Jezda Common Libs</h3>
+            <p class="mt-3 text-sm text-muted">Published reusable .NET NuGet libraries (domain, data access, integrations) underpinning the platform.</p>
+            <ul class="mt-4 flex flex-wrap gap-2">
+              <li class="tag">.NET 10</li>
+              <li class="tag">NuGet</li>
+            </ul>
+            <a href="https://github.com/jezda-solutions/common-libs" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline">View on GitHub &rarr;</a>
+          </div>
+
+          <div class="card reveal">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-lg font-semibold text-ink">PriceRadar</h3>
+              <span class="inline-flex shrink-0 items-center rounded-full border border-line px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-muted">Private</span>
+            </div>
+            <p class="mt-3 text-sm text-muted">Retail price-intelligence scraper harvesting products, barcodes and images from 23 Serbian chains via a stealth browser, feeding the platform.</p>
+            <ul class="mt-4 flex flex-wrap gap-2">
+              <li class="tag">Node.js</li>
+              <li class="tag">stealth browser</li>
+              <li class="tag">Docker</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-lg font-semibold text-ink">Storefronts</h3>
+              <span class="inline-flex shrink-0 items-center rounded-full border border-line px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-muted">Private</span>
+            </div>
+            <p class="mt-3 text-sm text-muted">Modern e-commerce fronts on the platform's commerce API: ASIX (Next.js 16 / React 19), Wearify, Bon Appetit, and reusable shop templates.</p>
+            <ul class="mt-4 flex flex-wrap gap-2">
+              <li class="tag">Next.js</li>
+              <li class="tag">React</li>
+              <li class="tag">TypeScript</li>
+              <li class="tag">Stripe</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <h3 class="text-lg font-semibold text-ink">Piazza / Liflet.rs</h3>
+            <p class="mt-3 text-sm text-muted">Digital promotional-leaflet platform for retail catalog offers.</p>
+            <ul class="mt-4 flex flex-wrap gap-2">
+              <li class="tag">.NET</li>
+              <li class="tag">PostgreSQL</li>
+            </ul>
+            <a href="https://liflet.rs" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline">Visit liflet.rs &rarr;</a>
+          </div>
+
+          <div class="card reveal">
+            <h3 class="text-lg font-semibold text-ink">jezda.net</h3>
+            <p class="mt-3 text-sm text-muted">Jezda Solutions company site + multi-tenant admin.</p>
+            <ul class="mt-4 flex flex-wrap gap-2">
+              <li class="tag">React 19</li>
+              <li class="tag">Vite</li>
+              <li class="tag">TypeScript</li>
+              <li class="tag">i18n</li>
+            </ul>
+            <a href="https://www.jezda.net" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline">Visit jezda.net &rarr;</a>
+          </div>
+
+          <div class="card reveal">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-lg font-semibold text-ink">Sports Almanac</h3>
+              <span class="inline-flex shrink-0 items-center rounded-full border border-line px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-muted">Private</span>
+            </div>
+            <p class="mt-3 text-sm text-muted">Personal prematch arbitrage / sure-bet detector crawling bookmakers and flagging inverse-odds &lt; 1 opportunities.</p>
+            <ul class="mt-4 flex flex-wrap gap-2">
+              <li class="tag">Python</li>
+              <li class="tag">FastAPI</li>
+              <li class="tag">PostgreSQL</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <footer id="site-footer" class="border-t border-line text-muted">
     <div class="container-page flex flex-col gap-6 py-10 sm:flex-row sm:items-center sm:justify-between">
