@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jezdimirovic.github.io/sitemap.xml
