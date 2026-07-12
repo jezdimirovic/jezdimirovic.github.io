@@ -5,9 +5,13 @@
   "description": "Personal portfolio of Zoran Jezdimirović",
   "scripts": {
     "build:css": "tailwindcss -i ./assets/css/tailwind.src.css -o ./assets/css/main.css --minify",
-    "watch:css": "tailwindcss -i ./assets/css/tailwind.src.css -o ./assets/css/main.css --watch"
+    "watch:css": "tailwindcss -i ./assets/css/tailwind.src.css -o ./assets/css/main.css --watch",
+    "build:cv": "node scripts/generate-cv.mjs",
+    "build:og": "node scripts/generate-og.mjs"
   },
   "devDependencies": {
+    "pdfkit": "^0.19.1",
+    "sharp": "^0.35.3",
     "tailwindcss": "^3.4.0"
   }
 }
