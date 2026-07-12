@@ -1,0 +1,8 @@
+{
+  "name": "Zoran Jezdimirović — Portfolio",
+  "short_name": "Zoran J.",
+  "icons": [{ "src": "assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }],
+  "theme_color": "#0a0e17",
+  "background_color": "#0a0e17",
+  "display": "standalone"
+}

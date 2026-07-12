@@ -2,9 +2,15 @@
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
 if (navToggle && navMenu) {
-  navToggle.addEventListener('click', () => navMenu.classList.toggle('hidden'));
+  navToggle.addEventListener('click', () => {
+    const isHidden = navMenu.classList.toggle('hidden');
+    navToggle.setAttribute('aria-expanded', String(!isHidden));
+  });
   navMenu.querySelectorAll('a').forEach((a) =>
-    a.addEventListener('click', () => navMenu.classList.add('hidden'))
+    a.addEventListener('click', () => {
+      navMenu.classList.add('hidden');
+      navToggle.setAttribute('aria-expanded', 'false');
+    })
   );
 }
 
