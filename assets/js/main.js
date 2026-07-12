@@ -42,8 +42,9 @@ sections.forEach((s) => spy.observe(s));
 
 // Typed role effect
 const typedEl = document.getElementById('typed-role');
-if (typedEl && !reduce) {
-  const phrases = (typedEl.dataset.typed || '').split('|').filter(Boolean);
+const typedPhrases = typedEl ? (typedEl.dataset.typed || '').split('|').filter(Boolean) : [];
+if (typedEl && !reduce && typedPhrases.length) {
+  const phrases = typedPhrases;
   let pi = 0, ci = 0, deleting = false;
   const tick = () => {
     const word = phrases[pi];
@@ -54,6 +55,6 @@ if (typedEl && !reduce) {
     else { deleting = false; pi = (pi + 1) % phrases.length; setTimeout(tick, 300); }
   };
   tick();
-} else if (typedEl) {
-  typedEl.textContent = (typedEl.dataset.typed || '').split('|')[0];
+} else if (typedEl && typedPhrases.length) {
+  typedEl.textContent = typedPhrases[0];
 }
