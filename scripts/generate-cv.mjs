@@ -59,15 +59,15 @@ const left = doc.page.margins.left;
 const right = doc.page.width - doc.page.margins.right;
 
 function sectionHeader(title) {
-  doc.moveDown(0.8);
+  doc.moveDown(1.1);
   doc
     .font(FONT.bold)
     .fontSize(11)
     .fillColor(COLOR.accent)
     .text(title.toUpperCase(), { characterSpacing: 1.1 });
-  const ruleY = doc.y + 2;
+  const ruleY = doc.y + 3;
   doc.moveTo(left, ruleY).lineTo(right, ruleY).lineWidth(1).strokeColor(COLOR.accent).stroke();
-  doc.moveDown(0.55);
+  doc.moveDown(0.75);
   doc.fillColor(COLOR.ink);
 }
 
@@ -85,13 +85,14 @@ doc.moveTo(left, doc.y).lineTo(right, doc.y).lineWidth(1.2).strokeColor(COLOR.ru
 
 // ---- Summary ----
 sectionHeader('Summary');
-doc.font(FONT.regular).fontSize(10).fillColor(COLOR.ink).text(cv.summary, { lineGap: 2 });
+doc.font(FONT.regular).fontSize(10).fillColor(COLOR.ink).text(cv.summary, { lineGap: 3.5 });
 
 // ---- Skills ----
 sectionHeader('Skills');
-cv.skills.forEach((s) => {
+cv.skills.forEach((s, idx) => {
   doc.font(FONT.bold).fontSize(9.5).fillColor(COLOR.ink).text(`${s.group}:  `, { continued: true });
   doc.font(FONT.regular).fontSize(9.5).fillColor(COLOR.subtle).text(s.items);
+  if (idx !== cv.skills.length - 1) doc.moveDown(0.35);
 });
 
 // ---- Experience ----
@@ -100,11 +101,20 @@ cv.experience.forEach((job, idx) => {
   doc.font(FONT.bold).fontSize(10.5).fillColor(COLOR.ink).text(job.role, { continued: true });
   doc.font(FONT.regular).fontSize(10.5).fillColor(COLOR.ink).text(`  —  ${job.company}`);
   doc.font(FONT.regular).fontSize(9).fillColor(COLOR.subtle).text(`${job.place}    ${job.dates}`);
-  doc.moveDown(0.2);
+  doc.moveDown(0.35);
   job.bullets.forEach((b) => {
-    doc.font(FONT.regular).fontSize(9.5).fillColor(COLOR.ink).text(`•  ${b}`, { lineGap: 1 });
+    doc.font(FONT.regular).fontSize(9.5).fillColor(COLOR.ink).text(`•  ${b}`, { lineGap: 2 });
   });
-  if (idx !== cv.experience.length - 1) doc.moveDown(0.45);
+  if (idx !== cv.experience.length - 1) doc.moveDown(0.7);
+});
+
+// ---- Projects ----
+sectionHeader('Selected Projects');
+cv.projects.forEach((p, idx) => {
+  doc.font(FONT.bold).fontSize(10).fillColor(COLOR.ink).text(p.name);
+  if (p.tech) doc.font(FONT.regular).fontSize(8.5).fillColor(COLOR.accent).text(p.tech);
+  doc.font(FONT.regular).fontSize(9.5).fillColor(COLOR.subtle).text(p.desc, { lineGap: 1.5 });
+  if (idx !== cv.projects.length - 1) doc.moveDown(0.55);
 });
 
 // ---- Education ----

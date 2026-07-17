@@ -14,11 +14,11 @@ export const cv = {
     github: 'github.com/jezdimirovic',
   },
   summary:
-    'Senior full-stack software engineer with 12+ years shipping production systems ' +
+    'Senior full-stack software engineer with 14+ years shipping production systems ' +
     'across fintech, iGaming, banking, and retail. Deep in the Microsoft stack ' +
     '(.NET / C#) with a strong React/TypeScript front-end practice and a test-driven ' +
-    'approach. Currently building complex web applications at Kaizen Ticketing ' +
-    '(London, remote) and, as co-owner of Jezda Solutions, an entire modular ERP ' +
+    'approach. Currently building complex web applications remotely for Kaizen ' +
+    'Ticketing (London) and, as founder of Jezda Solutions, an entire modular ERP ' +
     'platform, cross-platform POS, and e-commerce suite.',
   skills: [
     { group: 'Backend', items: 'C#, .NET / ASP.NET Core, EF Core, CQRS, Web API, REST' },
@@ -39,10 +39,10 @@ export const cv = {
       ],
     },
     {
-      role: 'Co-Owner / Founder',
+      role: 'CEO / Founder',
       company: 'Jezda Solutions',
       place: 'Remote',
-      dates: '2022 – Present',
+      dates: '2018 – Present',
       bullets: [
         'Run a software studio delivering a modular ERP platform, cross-platform POS, and e-commerce storefronts.',
         'Provide dedicated development teams and staff augmentation for international clients.',
@@ -76,9 +76,9 @@ export const cv = {
       place: 'Belgrade · Office',
       dates: '2016 – 2020',
       bullets: [
-        'Developed banking solutions with C# MVC, jQuery, and MS SQL Server.',
-        'Built a Xamarin mobile app for a leading bank and handled secure in-bank deployments.',
-        'Led a Swiss client project as developer and project manager, including on-site collaboration.',
+        'Part of the team building banking solutions for Banca Intesa, a leading bank in the region, with C# MVC, jQuery, and MS SQL Server.',
+        'Built a Xamarin mobile app and handled secure in-bank deployments.',
+        'Delivered a warehouse-management project for Fiege, a German logistics company, as developer and project manager, including on-site collaboration.',
       ],
     },
     {
@@ -90,6 +90,48 @@ export const cv = {
         'Transformed websites into optimised mobile experiences using XML, XPath, and XSLT.',
         'Built responsive interfaces with HTML, CSS, JavaScript, jQuery, and AJAX.',
       ],
+    },
+  ],
+  projects: [
+    {
+      name: 'Jezda Platform',
+      tech: '.NET 10 · FastEndpoints · PostgreSQL · EF Core · CQRS · Hangfire',
+      desc: 'Modular-monolith ERP unifying identity, HR, tasks, commerce/retail, accounting, finance, CRM and notifications behind one Web API.',
+    },
+    {
+      name: 'SERP',
+      tech: 'React 19 · TypeScript · Vite · Tailwind · SignalR',
+      desc: 'Unified React SPA front end for the platform, with shared auth, permissions and real-time notifications.',
+    },
+    {
+      name: 'Jezda POS',
+      tech: 'Flutter · Dart · ESC/POS',
+      desc: 'Cross-platform (Windows + Android) point-of-sale with retail & HoReCa modes, fiscal receipts, inventory and loyalty.',
+    },
+    {
+      name: 'Golub',
+      tech: '.NET 9 · FastEndpoints · PostgreSQL · MIT',
+      desc: 'Open-source smart email relay that stacks multiple providers’ free tiers with priority rotation, quota tracking and audit logging.',
+    },
+    {
+      name: 'Jezda Common Libs',
+      tech: '.NET 10 · NuGet',
+      desc: 'Published reusable .NET libraries (domain, data access, integrations) underpinning the platform.',
+    },
+    {
+      name: 'PriceRadar',
+      tech: 'Node.js · Docker',
+      desc: 'Retail price-intelligence scraper harvesting products, barcodes and images from 23 Serbian chains via a stealth browser.',
+    },
+    {
+      name: 'Storefronts',
+      tech: 'Next.js · React · TypeScript · Stripe',
+      desc: 'E-commerce fronts on the platform’s commerce API (ASIX, Wearify, Bon Appetit) plus reusable shop templates.',
+    },
+    {
+      name: 'Sports Almanac',
+      tech: 'Python · FastAPI · PostgreSQL',
+      desc: 'Personal tool that crawls bookmaker odds for prematch analysis and cross-market comparison.',
     },
   ],
   education: {
